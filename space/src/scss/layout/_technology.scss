@@ -1,0 +1,110 @@
+.technology {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/technology/background-technology-desktop.webp') center  center / cover no-repeat;
+    &__wrapper {
+        padding-right: 0;
+    }
+    &__heading {
+        margin: 172px 0 26px 110px;
+        color: $second_color;
+        & > span {
+            opacity: .25;
+        }
+    }
+
+    & .slide {
+        &__box {
+            display: flex;
+            align-items: center;
+            margin-left: 270px;
+        }
+        &__content {
+            margin-right: 130px;
+        }
+        &__title {
+            margin-bottom: 18px;
+        }
+        &__subtitle {
+            margin-bottom: 12px;
+            font-size: 16px;
+            letter-spacing: 2.7px;
+        }
+        &__text {
+            max-width: 444px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 178%;
+            color: $alt_color;
+        }
+        &__img {
+            max-width: 515px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    & .swiper {
+        height: 530px;
+
+        & .swiper-pagination-mobile {
+            display: none;
+        }
+        & .swiper-pagination-desktop {
+            display: block;
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+            right: auto;
+            left: 110px;
+            top: 50%;
+            transform: translate3d(0px,-50%,0);
+        }
+         
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            width: auto;
+            bottom: 0;
+            margin-bottom: 94px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+           margin-right: 24px;
+        }
+       
+        .swiper-pagination-bullet {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 32px;
+            background: transparent;
+            border: 1px solid #4D4D56;
+            opacity: 1;
+            counter-increment: bullets;
+            transition: background-color .3s ease;
+            &::before {
+                content: counter(bullets);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 400;
+                font-size: 32px;
+                color: $second_color;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background-color: $second_color;
+            &::before {
+                color: $main_color;
+            }
+        }
+    }
+}

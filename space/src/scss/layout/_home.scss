@@ -1,0 +1,60 @@
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: -1;
+    width: 100%;
+    background: url('/assets/home/background-home-desktop.webp') center  center / cover no-repeat;
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 130px;
+    }
+    &__content {
+        margin-left: 110px;
+    }
+    &__heading {
+        margin-bottom: 24px;
+    }
+    &__heading-span {
+        display: block;
+        margin-bottom: 24px;
+    }
+    &__text {
+        width: 444px;
+        font-family: 'Barlow', sans-serif;
+        line-height: 178%;
+        color: $alt_color;
+    }
+    &__link {
+        position: relative;
+        padding: 118px 81.6px 118px 81.5px;
+        background-color: $second_color;
+        border-radius: 50%;
+        font-size: 32px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: $main_color;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: width .4s ease, height .4s ease;
+        }
+        &:hover::after {
+            width: 450px;
+            height: 450px;
+        }
+    }
+    
+}

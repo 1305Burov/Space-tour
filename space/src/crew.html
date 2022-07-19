@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+        "title": "crew"
+    })
+    <body>
+        @@include('html/header.html', {
+            "home": "",
+            "destination": "",
+            "crew": "list__link_active",
+            "technology": ""
+        })
+        <main class="main">
+            @@include('html/crew.html', {})
+        </main>
+        @@include('html/footer.html', {})
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

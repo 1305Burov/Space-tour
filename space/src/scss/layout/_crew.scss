@@ -1,0 +1,88 @@
+.crew {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/crew/background-crew-desktop.webp') center  center / cover no-repeat;
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    & .container {
+        padding-bottom: 0;
+    }
+    &__heading {
+        margin: 172px 0 0 110px;
+        color: $second_color;
+        & > span {
+            opacity: .25;
+        }
+    }
+
+    & .swiper {
+        max-width: 100%;
+        & .swiper-pagination-mobile {
+            display: none;
+        }
+        & .swiper-pagination-desktop {
+            display: block;
+        }
+        &-slide {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 0px;
+        }
+        & .slide {
+            &__img {
+                max-width: 712px;
+                height: 100%;
+                object-fit: contain;
+            }
+            &__post {
+                margin-bottom: 15px;
+                opacity: .5;
+            }
+            &__name {
+                margin-bottom: 27px;
+            }
+            &__text {
+                max-width: 444px;
+                margin-bottom: 230px;
+                font-family: 'Barlow', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 178%;
+                color: $alt_color;
+            }
+        }
+    
+        &__pagination {
+            width: 15px;
+            height: 15px;
+        }
+         
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            width: auto;
+            bottom: 0;
+            margin-bottom: 94px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+           margin-right: 24px;
+        }
+       
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            background: $second_color;
+            opacity: 17.44%;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+    }
+}

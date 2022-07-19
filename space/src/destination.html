@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+        "title": "destination"
+    })
+    <body>
+        @@include('html/header.html', {
+            "home": "",
+            "destination": "list__link_active",
+            "crew": "",
+            "technology": ""
+        })
+        <main class="main">
+            @@include('html/destination.html', {})
+        </main>
+        @@include('html/footer.html', {})
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

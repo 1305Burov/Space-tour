@@ -1,0 +1,104 @@
+.header {
+    position: sticky;
+    overflow: hidden;
+    &__burger {
+        display: none;
+    }
+    &__nav {
+        display: flex;
+        height: 96px;
+        align-items: center;
+        justify-content: flex-start;
+        & .nav {
+            &__logo {
+                max-width: 48px;
+                height: 48px;
+                object-fit: fill;
+            }
+            
+            &__line {
+                width: 473px;
+                height: 1px;
+                margin-left: 63px;
+                opacity: .25;
+                background-color: #fff;
+            }
+
+            &__list {
+                position: relative;
+                flex: 1 1 auto;
+                display: flex;
+                height: 96px;
+                gap: 48px;
+                align-items: center;
+                justify-content: flex-end;
+                list-style: none;
+                counter-reset: links;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -29px;
+                    z-index: -100;
+                    width: 100vw;
+                    height: 96px;
+                    background: rgba(255, 255, 255, 0.04);
+                    backdrop-filter: blur(81.5485px);
+                }
+                & .list {
+                    &__item {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                    }
+                    &__link {
+                        padding-left: 24px;
+                        font-family: 'Barlow Condensed', sans-serif;
+                        font-size: 16px;
+                        color: $second_color;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        letter-spacing: 2.7px;
+                        counter-increment: links;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            display: block;
+                            width: 100%;
+                            height: 0px;
+                            opacity: 0;
+                            background-color: $second_color;
+                            pointer-events: none;
+                            transition: opacity .3s ease, height .2s ease;
+                        }
+                        &_active::after {
+                            height: 3px;
+                            opacity: 1 !important;
+                        }
+                        &:hover::after {
+                            height: 3px;
+                            opacity: .25;
+                        }
+                        &::before {
+                            content: counter(links);
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-weight: 700;
+                            font-size: 16px;
+                            letter-spacing: 2.7px;
+                            color: $second_color;
+                        }
+                        &:nth-child(-n+9):before {
+                            content: "0" counter(links);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

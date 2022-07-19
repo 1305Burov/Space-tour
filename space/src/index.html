@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "home"
+})
+
+<body class="body">
+    @@include('html/header.html', {
+        "home": "list__link_active",
+        "destination": "",
+        "crew": "",
+        "technology": ""
+    })
+    <main class="main">
+        @@include('html/home.html', {})
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
+
+<!-- /@img/imgName add image src  -->

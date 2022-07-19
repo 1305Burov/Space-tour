@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="description" content="Краткое описание страницы"> -->
+    <!-- <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>destination</title>
+</head>
+    <body>
+        <header class="header">
+    <div class="header__wrapper container">
+        <nav class="header__nav nav">
+            <a href="/" class="nav__logo-link"><img class="nav__logo" src="../assets/shared/logo.svg" alt="Logo"></a>
+            <div class="header__burger burger" id="burger">
+                <span class="burger__span"></span>
+                <span class="burger__span"></span>
+                <span class="burger__span"></span>
+            </div>
+            <div class="nav__line"></div>
+            <ol class="nav__list list" id="menu">     
+                <li class="list__item"><a href="/" class="list__link ">Home</a></li>
+                <li class="list__item"><a href="/destination.html" class="list__link list__link_active">Destination</a></li>
+                <li class="list__item"><a href="/crew.html" class="list__link ">Crew</a></li>
+                <li class="list__item"><a href="/technology.html" class="list__link ">Technology</a></li>
+            </ol>
+        </nav>
+    </div>
+</header>
+        <main class="main">
+            <section class="destination">
+    <div class="destination__wrapper container">
+        <h5 class="h5 destination__heading"><span>02</span> Pick your destination</h5>
+        <div class="destination__box" id="dest-box">
+            <img class="destination__image" src="/assets/destination/image-moon.webp" alt="Moon image">
+
+            <div class="destination__content" id="dest-content">
+                <ul class="destination__list list" id="dest-list">
+                    <li class="list__item"><button class="list__button list__button_active">Moon</button></li>
+                    <li class="list__item"><button class="list__button">Mars</button></li>
+                    <li class="list__item"><button class="list__button">Europa</button></li>
+                    <li class="list__item"><button class="list__button">Titan</button></li>
+                </ul>
+    
+                <div class="destination__textbox textbox">
+                    <h2 class="h2 textbox__heading">Moon</h2>
+                    <p class="textbox__text">
+                        See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                    </p>
+                    <div class="textbox__info info">
+                        <div class="info__distance">
+                            <h6 class="sh2 info__heading">AVG. DISTANCE</h6>
+                            <p class="sh1 info__text" id="distance">384,400 km</p>   
+                        </div>
+                        <div class="info__time">
+                            <h6 class="sh2 info__heading">Est. travel time</h6>
+                            <p class="sh1 info__text" id="time">3 days</p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+        <footer class="footer"></footer>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

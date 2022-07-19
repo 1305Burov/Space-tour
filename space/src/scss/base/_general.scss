@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 165px 40px 55px;
+}
+
+.hidden {
+    display: none;
+}
